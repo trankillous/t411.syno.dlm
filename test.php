@@ -5,7 +5,7 @@ $t411 = new SynoDLMSearchT411;
 $t411->debug = 1;
 $curl = curl_init();
 
-parse_str(implode('&', array_slice($argv, 1)), $_GET);
+// parse_str(implode('&', array_slice($argv, 1)), $_GET);
 $t411->prepare($curl, 'game of throne', $_GET['username'], $_GET['password']);
 
 $response = curl_exec($curl);
@@ -37,5 +37,3 @@ class plugin {
         return count($this->results);
     }
 }
-
-?>
