@@ -1,9 +1,9 @@
 <?php
 class SynoDLMSearchT411 {
-    private $aurl = 'https://api.t411.ch/auth'; //auth url
-    private $qurl = 'https://api.t411.ch/torrents/search/'; // search url
+    private $aurl = 'https://api.t411.li/auth'; //auth url
+    private $qurl = 'https://api.t411.li/torrents/search/'; // search url
     private $dlurl = 'https://127.0.0.1/t411.syno.php'; // torrent download url
-    private $purl = 'https://www.t411.ch/torrents/'; // torrent page url
+    private $purl = 'https://www.t411.li/torrents/'; // torrent page url
 
     // go throw all results
     private $limit = 100;
@@ -36,6 +36,9 @@ class SynoDLMSearchT411 {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 
         $body = curl_exec($ch);
+        var_dump($body);
+        var_dump($username);
+        var_dump($password);
         curl_close($ch);
 
         // now, process the JSON string
