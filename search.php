@@ -44,9 +44,7 @@ class SynoDLMSearchT411 {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 
         $body = curl_exec($ch);
-        var_dump($body);
-        var_dump($username);
-        var_dump($password);
+
         curl_close($ch);
 
         // now, process the JSON string
@@ -147,4 +145,3 @@ class SynoDLMSearchT411 {
         }
     }
 }
-?>
