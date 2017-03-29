@@ -1,10 +1,10 @@
 {
 "name": "t411",
 "displayname": "t411",
-"description": "Search on t411.li.",
-"version": "1.3",
+"description": "Search on t411.ai.",
+"version": "1.4",
 "accountsupport": true,
-"site": "http://t411.li",
+"site": "http://t411.ai",
 "module": "search.php",
 "type": "search",
 "class": "SynoDLMSearchT411"

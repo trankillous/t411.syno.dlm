@@ -17,7 +17,7 @@ tar zcf t411.syno.dlm INFO search.php
 1. Go to download station > settings > BT search
 2. Add the dlm package
 3. Edit the new t411 line
-4. Add your t411.io login and password. The verify button is no use. I did not code the account verification.
+4. Add your t411.ai login and password. The verify button is no use. I did not code the account verification.
 
 ### Copy the torrent download script into the webserver
 1. Active your NAS Web Station, using https.
@@ -27,4 +27,4 @@ tar zcf t411.syno.dlm INFO search.php
 ## The documents supporting the developpement
 https://global.download.synology.com/download/Document/DeveloperGuide/DLM_Guide.pdf
 
-http://api.t411.li/
+http://api.t411.ai/
