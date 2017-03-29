@@ -1,9 +1,10 @@
 <?php
 class SynoDLMSearchT411 {
-    private $aurl = 'https://api.t411.ai/auth'; //auth url
-    private $qurl = 'https://api.t411.ai/torrents/search/'; // search url
+    private $domain = 't411.ai';
     private $dlurl = 'https://127.0.0.1/t411.syno.php'; // torrent download url
-    private $purl = 'https://www.t411.ai/torrents/'; // torrent page url
+    private $aurl; //auth url
+    private $qurl; // search url
+    private $purl; // torrent page url
 
     // go throw all results
     private $limit = 100;
@@ -15,6 +16,13 @@ class SynoDLMSearchT411 {
     public $debug  = 0;
 
     public function __construct() {
+        // Init properties.
+        $apiUrl = sprintf('https://api.%s', $this->domain);
+        $siteUrl = sprintf('https://www.%s', $this->domain);
+        $this->aurl = $apiUrl . '/auth'; //auth url
+        $this->qurl = $apiUrl . '/torrents/search/'; // search url
+        $this->dlurl = 'https://127.0.0.1/t411.syno.php'; // torrent download url
+        $this->purl = $siteUrl . '/torrents/'; // torrent page url
     }
 
     private function DebugLog($str) {
